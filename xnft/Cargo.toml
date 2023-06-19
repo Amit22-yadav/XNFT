@@ -21,6 +21,7 @@ frame-support = { version = "4.0.0-dev", default-features = false, git = "https:
 frame-system = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.39" }
 pallet-uniques= {path="../uniques", default-features = false}
 pallet-xcm ={path="../xcm/pallet-xcm",default-features = false}
+orml-traits = {git ="https://github.com/open-web3-stack/open-runtime-module-library", default-features = false, branch = "polkadot-v0.9.39"}
 xcm ={path="../xcm",default-features = false}
 xcm-executor={path="../xcm/xcm-executor",default-features = false}
 xcm-builder ={path="../xcm/xcm-builder",default-features = false}
@@ -36,6 +37,7 @@ std = [
 	"codec/std",
 	"frame-benchmarking?/std",
 	"frame-support/std",
+	"orml-traits/std",
     "pallet-xcm/std",
     "pallet-uniques/std",
 	"frame-system/std",
