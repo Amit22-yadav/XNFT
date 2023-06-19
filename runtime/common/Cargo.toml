@@ -53,7 +53,7 @@ slot-range-helper = { path = "slot_range_helper", default-features = false }
 xcm = { path = "../../xcm", default-features = false }
 
 [dev-dependencies]
-hex-literal = "0.3.4"
+hex-literal = "0.4.1"
 frame-support-test = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39" }
 pallet-babe = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39" }
 pallet-treasury = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39" }
