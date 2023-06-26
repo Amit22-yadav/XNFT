@@ -3685,7 +3685,7 @@ dependencies = [
  "substrate-wasm-builder",
  "tiny-keccak",
  "tokio",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -3759,9 +3759,9 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 
 [[package]]
 name = "libc"
-version = "0.2.139"
+version = "0.2.147"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "201de327520df007757c1f0adce6e827fe8562fbc28bfd9c15571c66ca1f5f79"
+checksum = "b4668fb0ea861c1df094127ac5f1da3409a82116a4ba74fca2e58ef927159bb3"
 
 [[package]]
 name = "libgit2-sys"
@@ -5104,6 +5104,39 @@ dependencies = [
 ]
 
 [[package]]
+name = "orml-traits"
+version = "0.4.1-dev"
+source = "git+https://github.com/open-web3-stack/open-runtime-module-library?branch=polkadot-v0.9.39#a0751540591c88ccc2d4029464de887933727183"
+dependencies = [
+ "frame-support",
+ "impl-trait-for-tuples",
+ "num-traits",
+ "orml-utilities",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+ "xcm 0.9.39-1 (git+https://github.com/paritytech/polkadot?branch=release-v0.9.39)",
+]
+
+[[package]]
+name = "orml-utilities"
+version = "0.4.1-dev"
+source = "git+https://github.com/open-web3-stack/open-runtime-module-library?branch=polkadot-v0.9.39#a0751540591c88ccc2d4029464de887933727183"
+dependencies = [
+ "frame-support",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "os_str_bytes"
 version = "6.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6163,7 +6196,7 @@ dependencies = [
  "sp-io",
  "sp-runtime",
  "sp-std",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -6188,7 +6221,7 @@ dependencies = [
  "sp-runtime",
  "sp-std",
  "sp-tracing",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -7552,7 +7585,7 @@ dependencies = [
  "substrate-wasm-builder",
  "tiny-keccak",
  "tokio",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
  "xnft",
@@ -7607,7 +7640,7 @@ dependencies = [
  "sp-staking",
  "sp-std",
  "static_assertions",
- "xcm",
+ "xcm 0.9.39-1",
 ]
 
 [[package]]
@@ -7683,7 +7716,7 @@ dependencies = [
  "sp-tracing",
  "static_assertions",
  "thousands",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-executor",
 ]
 
@@ -7956,7 +7989,7 @@ dependencies = [
  "substrate-wasm-builder",
  "test-runtime-constants",
  "tiny-keccak",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -8844,7 +8877,7 @@ dependencies = [
  "substrate-wasm-builder",
  "tiny-keccak",
  "tokio",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -13450,7 +13483,7 @@ dependencies = [
  "tiny-keccak",
  "tokio",
  "westend-runtime-constants",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
@@ -13813,7 +13846,23 @@ dependencies = [
  "serde",
  "sp-io",
  "sp-weights",
- "xcm-procedural",
+ "xcm-procedural 0.9.39-1",
+]
+
+[[package]]
+name = "xcm"
+version = "0.9.39-1"
+source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.39#c22e1c4173bf6966f5d1980f4299f7abe836f0c1"
+dependencies = [
+ "bounded-collections",
+ "derivative",
+ "impl-trait-for-tuples",
+ "log",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-weights",
+ "xcm-procedural 0.9.39-1 (git+https://github.com/paritytech/polkadot?branch=release-v0.9.39)",
 ]
 
 [[package]]
@@ -13837,7 +13886,7 @@ dependencies = [
  "sp-io",
  "sp-runtime",
  "sp-std",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-executor",
 ]
 
@@ -13857,7 +13906,7 @@ dependencies = [
  "sp-runtime",
  "sp-std",
  "sp-weights",
- "xcm",
+ "xcm 0.9.39-1",
 ]
 
 [[package]]
@@ -13876,13 +13925,24 @@ dependencies = [
  "sp-runtime",
  "sp-state-machine",
  "sp-tracing",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-executor",
 ]
 
 [[package]]
 name = "xcm-procedural"
 version = "0.9.39-1"
+dependencies = [
+ "Inflector",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "xcm-procedural"
+version = "0.9.39-1"
+source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.39#c22e1c4173bf6966f5d1980f4299f7abe836f0c1"
 dependencies = [
  "Inflector",
  "proc-macro2",
@@ -13902,7 +13962,7 @@ dependencies = [
  "polkadot-runtime-parachains",
  "sp-io",
  "sp-std",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-executor",
 ]
 
@@ -13926,7 +13986,7 @@ dependencies = [
  "sp-runtime",
  "sp-std",
  "sp-tracing",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
  "xcm-simulator",
@@ -13951,7 +14011,7 @@ dependencies = [
  "sp-io",
  "sp-runtime",
  "sp-std",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
  "xcm-simulator",
@@ -13964,6 +14024,7 @@ dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "orml-traits",
  "pallet-uniques 4.0.0-dev",
  "pallet-xcm",
  "parity-scale-codec",
@@ -13971,7 +14032,7 @@ dependencies = [
  "sp-core",
  "sp-io",
  "sp-runtime",
- "xcm",
+ "xcm 0.9.39-1",
  "xcm-builder",
  "xcm-executor",
 ]
